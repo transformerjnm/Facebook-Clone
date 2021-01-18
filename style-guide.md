@@ -73,7 +73,7 @@ If a single-line comment overflows into multiple lines, it must use the multi-li
 
 # misc
 
-- Indent using tabs
+- Indent using tabs(4 spaces)
 - Nested elements must be indented
 - Semicolons are required
 - Use Let and Const for variables and not Var

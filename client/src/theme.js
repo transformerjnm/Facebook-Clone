@@ -1,13 +1,29 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, formatMs } from '@material-ui/core/styles';
 
 export const lightTheme = createMuiTheme({
   palette: {
     primary: {
-      main: '#05386B',
+      light: '#ffffff',
+      main: '#f0f2f5',
+      dark: '#adafb3'
     },
     secondary: {
-      main: '#F6F6F6',
+      light: '#AAC9FF',
+      main: '#1878f2',
+      dark: '#4267B2'
     },
+    info: {
+      main: '#3d3d3d'
+    },
+    error: {
+      main: '#f02849'
+    },
+    warning: {
+      main: '#000000'
+    },
+    success: {
+      main: '#31a24c'
+    }
   },
   MuiTypography: {
     variantMapping: {
@@ -52,3 +68,14 @@ lightTheme.typography.body1 = {
   fontSize: 'calc(.8rem + 1vmin)',
   color: '#313639'
 }
+
+// Form
+root: {
+  '& > *': {
+    margin: theme.spacing(1),
+    width: '300px',
+    height: '18px',
+    color: "secondary",
+    fontSize: "calc(.8rem + 1vmin)"
+  },
+},

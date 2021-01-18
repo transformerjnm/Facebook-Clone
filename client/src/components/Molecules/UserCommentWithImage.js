@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import { Input, Paper }from '@material-ui/core/';
 
 /**
  * Summary:
@@ -16,7 +16,10 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		'& > *': {
 			margin: theme.spacing(1),
-			width: '25ch',
+			width: '300px',
+			height: '18px',
+			color: "secondary",
+			fontSize: "calc(.8rem + 1vmin)"
 		},
 	},
 }));
@@ -24,14 +27,11 @@ export default props => {
 	const classes = useStyles()
 	return (
 		<div>
+			<Paper>
 			<form className={classes.root} noValidate autoComplete="off">
-				<TextField
-    		id="filled-secondary"
-				label="Filled secondary"
-				variant="filled"
-				color="secondary"
-				/>
+			<Input placeholder="Write a comment..." color="secondary" inputProps={{ 'aria-label': 'description' }} />
 			</form>
+			</Paper>
 		</div>
 	);
 }
