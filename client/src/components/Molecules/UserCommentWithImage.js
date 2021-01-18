@@ -1,5 +1,6 @@
-import { } from '@material-ui/core';  
-import CircleImage from '../Atoms/CircleImage';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
 /**
  * Summary:
@@ -11,10 +12,26 @@ import CircleImage from '../Atoms/CircleImage';
  * AuthorComment
  * 
  */
+const useStyles = makeStyles((theme) => ({
+	root: {
+		'& > *': {
+			margin: theme.spacing(1),
+			width: '25ch',
+		},
+	},
+}));
 export default props => {
+	const classes = useStyles()
 	return (
 		<div>
-			<p>UserCommentWithImage.js</p>
+			<form className={classes.root} noValidate autoComplete="off">
+				<TextField
+    		id="filled-secondary"
+				label="Filled secondary"
+				variant="filled"
+				color="secondary"
+				/>
+			</form>
 		</div>
 	);
 }
