@@ -23,7 +23,6 @@ export default props =>  {
 					<Route exact path='/'>
 						<p>Go to /Home in the URL</p>
 						{/* Login/landing page goes here  */}
-					<UserCommentWithImage />
 					</Route> 										                             
 					<Redirect to='/'/>
 				</Switch>  				

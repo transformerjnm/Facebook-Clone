@@ -70,12 +70,12 @@ lightTheme.typography.body1 = {
 }
 
 // Form
-root: {
-  '& > *': {
-    margin: theme.spacing(1),
-    width: '300px',
-    height: '18px',
-    color: "secondary",
-    fontSize: "calc(.8rem + 1vmin)"
-  },
-},
+
+//  This is not working. 
+
+//   form = {
+//     width: '300px',
+//     height: '18px',
+//     color: "secondary",
+//     fontSize: "calc(.8rem + 1vmin)"
+// } 
