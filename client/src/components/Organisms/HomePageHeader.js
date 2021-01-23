@@ -12,7 +12,7 @@ export default props => {
   	return (
     	<AppBar title="My App">
 				<Tabs>
-				<Tab label="Item 1" />
+					<Tab label="Item 1" />
           <Tab label="Item 2" />
           <Tab label="Item 3" />
           <Tab label="Item 4" />
