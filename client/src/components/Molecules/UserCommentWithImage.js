@@ -12,6 +12,10 @@ import { Input, Paper }from '@material-ui/core/';
  * AuthorComment
  * 
  */
+
+// Material UI Styling below
+
+
 // const useStyles = makeStyles((theme) => ({
 // 	root: {
 // 		'& > *': {
