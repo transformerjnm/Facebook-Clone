@@ -3,7 +3,8 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { lightTheme } from './theme.js'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import HomePage from './components/Pages/HomePage';
-import UserCommentWithImage from './components/Molecules/UserCommentWithImage'
+import UserCommentWithImage from './components/Molecules/UserCommentWithImage';
+import HomePageHeader from './components/Organisms/HomePageHeader';
 
 /**
  * Summary:
@@ -23,6 +24,7 @@ export default props =>  {
 					<Route exact path='/'>
 						<p>Go to /Home in the URL</p>
 						{/* Login/landing page goes here  */}
+						<HomePageHeader />
 					</Route> 										                             
 					<Redirect to='/'/>
 				</Switch>  				

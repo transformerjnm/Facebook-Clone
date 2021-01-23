@@ -1,4 +1,4 @@
-import { } from '@material-ui/core';  
+import { AppBar, Tabs, Tab } from '@material-ui/core';  
 
 /**
  * Summary:
@@ -10,8 +10,15 @@ import { } from '@material-ui/core';
  */
 export default props => {
   	return (
-    	<div>
-     		<p>Home Page Header</p>
-    	</div>
+    	<AppBar title="My App">
+				<Tabs>
+				<Tab label="Item 1" />
+          <Tab label="Item 2" />
+          <Tab label="Item 3" />
+          <Tab label="Item 4" />
+				</Tabs>
+
+			</AppBar>
+     		
   	);
 }

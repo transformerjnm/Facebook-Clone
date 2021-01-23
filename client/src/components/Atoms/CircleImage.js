@@ -1,5 +1,6 @@
 import { Paper } from '@material-ui/core';  
 import { lightTheme } from '../../theme';
+
 /**
  * Summary:
  * Takes in an image and displays it as a circle. All instances and uses of circle images should be the same size. On hover should show pop up with information about the user if passed in.
@@ -13,23 +14,22 @@ import { lightTheme } from '../../theme';
  * HoverInformation is being delayed until further notice. Once we get data structure setup and know what its going to display we can create it.
  * hoverInformation: Object of information to display.
  */
-
 export default props => {
 	const paperStyle = {
-		height: "36px",
-		width: "36px",
+		height: "40px",
+		width: "40px",
 		borderRadius: "50%",
 	};
 	const circleImageContainer = {
 		position: 'relative',
-		width: '36px',
-		height: '36px',
+		width: '40px',
+		height: '40px',
 		marginLeft: 'auto'
 	};
 	const circleImageStyle= {
 		objectFit: "cover",
-  		height: "36px",
-		width: "36px",
+  		height: "40px",
+		width: "40px",
 		borderRadius: "50%",
 		position: 'absolute',
 		bottom: '0'
@@ -53,7 +53,11 @@ export default props => {
 				console.log("circle image is missing alt for " + props.src);
 			}
 			return (	
-				<div style={circleImageContainer}>		
+				<div style={circleImageContainer} onClick={(event) => {
+					if(props.clickAction) {
+						props.clickAction(event);
+					}
+				}}>		
 					<img style={circleImageStyle} src={props.src} alt={props.alt} />	
 					{ showOnlineCircle() }
 				</div>		
