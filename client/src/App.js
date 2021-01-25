@@ -22,9 +22,10 @@ export default props =>  {
 						<HomePage/>
 					</Route>
 					<Route exact path='/'>
-						<p>Go to /Home in the URL</p>
+						{/* <p>Go to /Home in the URL</p> */}
 						{/* Login/landing page goes here  */}
 						<HomePageHeader />
+						
 					</Route> 										                             
 					<Redirect to='/'/>
 				</Switch>  				

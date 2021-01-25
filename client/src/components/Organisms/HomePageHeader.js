@@ -1,5 +1,8 @@
-import { AppBar, Tabs, Tab } from '@material-ui/core';  
-
+import React from 'react';
+import { AppBar, InputBase, Toolbar } from '@material-ui/core'
+import SearchIcon from '@material-ui/icons/Search';
+import FacebookIcon from '@material-ui/icons/Facebook'
+// import { AccountCircle, MenuIcon, SearchIcon, MailIcon, NotificationsIcon, MoreIcon  } from '@material-ui/icons'
 /**
  * Summary:
  * Responsive header for navigating the application. At the current stage in development we want this to be responsive and have dummy links.
@@ -8,17 +11,25 @@ import { AppBar, Tabs, Tab } from '@material-ui/core';
  * Props: 
  * 
  */
-export default props => {
-  	return (
-    	<AppBar title="My App">
-				<Tabs>
-					<Tab label="Item 1" />
-          <Tab label="Item 2" />
-          <Tab label="Item 3" />
-          <Tab label="Item 4" />
-				</Tabs>
 
-			</AppBar>
-     		
-  	);
+export default props => {
+  return (
+    <div>
+      <AppBar position="static">
+        <Toolbar>
+          <div>
+          <FacebookIcon />
+          </div>
+          <div>
+            <SearchIcon />
+          </div>
+          <div>
+
+            <InputBase placeholder="Search Facebook" />
+            
+          </div>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
